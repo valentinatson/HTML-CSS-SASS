@@ -1,0 +1,43 @@
+.boite {
+  display: flex;
+}
+.boite__1 {
+  height: 250px;
+  width: 150px;
+  background-color: rgb(200, 0, 255);
+}
+.boite__2 {
+  height: 250px;
+  width: 150px;
+  background-color: rgb(255, 0, 187);
+}
+.boite__3 {
+  height: 250px;
+  width: 150px;
+  background-color: rgb(9, 255, 0);
+}
+
+.custom1 {
+  font-style: italic;
+  color: red;
+  text-decoration: line-through;
+  font-size: 100px;
+}
+.custom2 {
+  font-style: oblique;
+  color: rgb(255, 0, 234);
+  text-decoration: line-through;
+}
+.custom3 {
+  font-style: italic;
+  color: rgb(234, 255, 0);
+  text-decoration: line-through;
+  font-size: 75px;
+}
+.custom4 {
+  font-style: oblique;
+  color: rgb(255, 98, 0);
+  text-decoration: line-through;
+}
+
+/*# sourceMappingURL=style.css.map */

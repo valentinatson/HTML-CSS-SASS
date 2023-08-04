@@ -1,0 +1,49 @@
+@mixin blocOptions($height: 250px, $width: 150px, $background-color: rgb(200, 0, 255) ) {
+    height: $height;
+    width: $width;
+    background-color: $background-color;
+}
+.boite{
+    display: flex;
+    &__1{
+        @include blocOptions();
+    }
+    &__2{
+        @include blocOptions($height: 250px, $width: 150px, $background-color: rgb(255, 0, 187));
+    }
+    &__3{
+        @include blocOptions(250px,  150px, rgb(9, 255, 0));
+    }
+}
+@mixin myFs($fs: 75px) {
+    font-size: $fs;
+}
+
+
+@mixin myTextDecoration {
+    text-decoration: line-through;
+}
+.custom{
+    &1{
+        font-style: italic;
+        color: red;
+        @include myTextDecoration();
+        @include myFs(100px)
+    }
+    &2{
+        font-style: oblique;
+        color: rgb(255, 0, 234);
+        @include myTextDecoration();
+    }
+    &3{
+        font-style: italic;
+        color: rgb(234, 255, 0);
+        @include myTextDecoration();
+        @include myFs()
+    }
+    &4{
+        font-style: oblique;
+        color: rgb(255, 98, 0);
+        @include myTextDecoration();
+    }
+}
