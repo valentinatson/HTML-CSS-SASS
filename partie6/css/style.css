@@ -1,25 +1,93 @@
+/* @mixin dynamicBox(){
+    width: 200px;
+    height: 200px;
+    background-color: magenta;
+    border-radius: 13px;
+} */
 .dynamic div {
   display: flex;
+  flexDirection: row;
   justify-content: space-around;
+  align-items: baseline;
+  border: 5px solid rgb(128, 98, 87);
 }
 
 .dynamic__box1 {
   width: 200px;
   height: 200px;
-  background-color: magenta;
-  border-radius: 13px;
+  background-color: rgb(255, 0, 200);
+  transition: all 2000ms;
+}
+.dynamic__box1:hover {
+  background-color: red;
 }
 .dynamic__box2 {
   width: 200px;
   height: 200px;
-  background-color: magenta;
-  border-radius: 13px;
+  background-color: rgb(255, 225, 0);
+  transition: all 2000ms;
+}
+.dynamic__box2:hover {
+  background-color: rgb(0, 42, 255);
 }
 .dynamic__box3 {
   width: 200px;
   height: 200px;
-  background-color: magenta;
-  border-radius: 13px;
+  background-color: orange;
+  transition: all 2000ms;
+}
+.dynamic__box3:hover {
+  background-color: rgb(79, 52, 52);
+}
+
+/* .a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: rgb(255, 0, 0);
+    &:active{
+        color: green;
+    }
+    &:visited{
+        color: brown
+    } 
+}
+ */
+.dynamic__link1 {
+  color: rgb(255, 0, 0);
+  display: inline-block;
+  height: 200px;
+  background-color: aqua;
+}
+.dynamic__link1:hover {
+  color: black;
+}
+.dynamic__link2 {
+  color: rgb(255, 0, 0);
+}
+.dynamic__link2:hover {
+  color: black;
+}
+.dynamic__link3 {
+  color: rgb(255, 0, 0);
+}
+.dynamic__link3:hover {
+  color: black;
+}
+
+section {
+  border: 5px dashed magenta;
+}
+
+article {
+  width: 200px;
+  height: 200px;
+  background-color: orangered;
+}
+
+aside {
+  width: 200px;
+  height: 80px;
+  background-color: rgb(128, 98, 87);
 }
 
 /*# sourceMappingURL=style.css.map */

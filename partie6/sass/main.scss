@@ -1,21 +1,108 @@
-.dynamic div{
-    display: flex;
-    justify-content: space-around;
-}
-@mixin dynamicBox(){
+/* @mixin dynamicBox(){
     width: 200px;
     height: 200px;
     background-color: magenta;
     border-radius: 13px;
+} */
+@mixin dynamicBox($bgc:magenta, $height:200px, $width: 200px){
+    width: $width;
+    height: $height;
+    background-color: $bgc;
+    //border-radius: 13px;
 }
+@mixin flexBoxConfig($justify-content:center, $alignItems:center, $flexDirection:row){
+    display: flex;
+    flexDirection:$flexDirection;
+    justify-content:$justify-content;
+    align-items: $alignItems;
+
+}
+.dynamic div{
+    @include flexBoxConfig(space-around, baseline);
+    border: 5px solid rgb(128, 98, 87);
+}
+
 .dynamic__box{
     &1{
-        @include dynamicBox
+        @include dynamicBox(rgb(255, 0, 200));
+        transition: all 2000ms;
+        &:hover{
+            background-color: red;
+            //transform: rotate(350deg);
+        }
     }
     &2{
-        @include dynamicBox
+        @include dynamicBox(rgb(255, 225, 0));
+        transition: all 2000ms;
+        &:hover{
+            background-color: rgb(0, 42, 255);
+            //transform: rotate(350deg);
+        }
     }
     &3{
-        @include dynamicBox
+        @include dynamicBox(orange);
+        transition: all 2000ms;
+        &:hover{
+            background-color: rgb(79, 52, 52);
+            //transform: rotate(350deg);
+        }
     }
+}
+
+
+// link
+
+
+@mixin dynamicLink($color:magenta){
+    color: $color;
+}
+
+/* .a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: rgb(255, 0, 0);
+    &:active{
+        color: green;
+    }
+    &:visited{
+        color: brown
+    } 
+}
+ */
+.dynamic__link{
+    &1{
+        @include dynamicLink(rgb(255, 0, 0));
+        display: inline-block;
+        height: 200px;
+        background-color: aqua;
+        &:hover{
+            color: black
+        }
+
+    }
+    &2{
+        @include dynamicLink(rgb(255, 0, 0));
+        &:hover{
+            color: black
+        }
+
+    }
+    &3{
+        @include dynamicLink(rgb(255, 0, 0));
+        &:hover{
+            color: black
+        }
+    }
+}
+
+section{
+    border: 5px dashed magenta
+}
+
+article{
+    @include dynamicBox(orangered,200px ,200px );
+}
+
+aside{
+    @include dynamicBox(rgb(128, 98, 87),80px ,200px );
 }
