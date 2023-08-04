@@ -1,0 +1,25 @@
+.dynamic div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dynamic__box1 {
+  width: 200px;
+  height: 200px;
+  background-color: magenta;
+  border-radius: 13px;
+}
+.dynamic__box2 {
+  width: 200px;
+  height: 200px;
+  background-color: magenta;
+  border-radius: 13px;
+}
+.dynamic__box3 {
+  width: 200px;
+  height: 200px;
+  background-color: magenta;
+  border-radius: 13px;
+}
+
+/*# sourceMappingURL=style.css.map */

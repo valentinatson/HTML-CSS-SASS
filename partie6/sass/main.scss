@@ -1,0 +1,21 @@
+.dynamic div{
+    display: flex;
+    justify-content: space-around;
+}
+@mixin dynamicBox(){
+    width: 200px;
+    height: 200px;
+    background-color: magenta;
+    border-radius: 13px;
+}
+.dynamic__box{
+    &1{
+        @include dynamicBox
+    }
+    &2{
+        @include dynamicBox
+    }
+    &3{
+        @include dynamicBox
+    }
+}
